@@ -12,13 +12,21 @@ public class StackImpl {
 		StackPrototype.push(40);
 		StackPrototype.push(65);
 		StackPrototype.push(45);
-		
-		while(!StackPrototype.isEmpty()) {
+
+		while (!StackPrototype.isEmpty()) {
 			System.out.println(StackPrototype.pop());
 		}
-		
-		
+
+		String inputString = "Balachandar Rangasamy";
+		StackReverseStringImpl stringReverse = new StackReverseStringImpl(inputString.length());
+
+		for (char c : inputString.toCharArray()) {
+			stringReverse.push(c);
+		}
+
+		while (!stringReverse.isEmpty()) {
+			System.out.print(stringReverse.pop());
+		}
 	}
-	
 
 }
